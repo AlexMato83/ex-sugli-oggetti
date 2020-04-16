@@ -14,13 +14,15 @@ $(document).ready(function(){
     // se all'interno dell'input c'è un contenuto
     if($("#insertWeight").val() != ""){
       // creo dinamicamente un div per il titolo
-      $(".nome").prepend("<div>Questo è l'oggetto in questione:</div>")
+      $(".nome").prepend("<div id='titolo'>Questo è l'oggetto in questione:</div>")
       // appendo al div esistente il nome
       $(".nome").append("nome: " + palla.nome)
       // appendo al div esistente il peso
       $(".peso").append("peso: " + palla.peso)
-    }
 
+    }
+    // cancello il peso inserito dall'input
+    $("#insertWeight").val("");
   })
 
 
